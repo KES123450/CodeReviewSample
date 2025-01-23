@@ -52,6 +52,7 @@ void loadUserInfo(void) {
 
 	//사용자 정보를 기반으로 로그인 payload 데이터 생성
 	USER_INFO userInfo = { 0 };
+	//여기 주석은 왜 삭제하지 않았나요? 다른 의도가 있나요?
 	//buildLoginPayload(userInfo);
 	buildLoginPayload(userInfo);
 	if (userInfo.payloadSize > 0) {
@@ -61,7 +62,8 @@ void loadUserInfo(void) {
 	else {
 		logForUserLogin("ERROR: Failed to build user info");
 	}
-
+	
+	//여기에 성공 로그를 넣으면 실패했을 때 헷갈릴 여지가 있을 것 같습니다.
 	logForUserLogin("Login process complete.");
 }
 
